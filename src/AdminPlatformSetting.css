@@ -1,0 +1,77 @@
+.aps-container {
+    display: flex;
+    font-family: Arial, sans-serif;
+    background: #f7f9fc;
+  }
+  
+  /* Left nav */
+  .aps-nav {
+    width: 200px;
+    background: #fff;
+    padding: 15px;
+    border-right: 1px solid #ddd;
+  }
+  .aps-nav h2 { margin-top: 0; }
+  .aps-nav ul { list-style: none; padding: 0; }
+  .aps-nav li { margin: 10px 0; cursor: pointer; }
+  
+  /* Main content */
+  .aps-main {
+    flex: 1;
+    padding: 20px;
+  }
+  .aps-main h1 { margin-top: 0; }
+  
+  /* Sections */
+  section { margin-bottom: 30px; }
+  section h2 { margin-bottom: 10px; }
+  
+  /* Feature Toggles */
+  .toggles { list-style: none; padding: 0; }
+  .toggles li { margin-bottom: 8px; position: relative; }
+  .tooltip {
+    display: inline-block;
+    background: #3498db;
+    color: #fff;
+    border-radius: 50%;
+    width: 16px; height: 16px;
+    text-align: center; line-height: 16px;
+    font-size: 0.8em; margin-left: 5px;
+    cursor: help;
+  }
+  
+  /* Payment */
+  .payment-group label { display: block; margin-bottom: 8px; }
+  .btn { margin-top: 8px; padding: 6px 12px; background: #27ae60; color: #fff; border: none; cursor: pointer; }
+  
+  /* API Keys */
+  .api-table { width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+  .api-table th, .api-table td { padding: 10px; border:1px solid #ddd; }
+  .api-table button { margin-right: 5px; padding:4px 8px; cursor: pointer; }
+  
+  /* Data Retention */
+  .flagged-table, .api-table { margin-top: 10px; }
+  
+  /* Moderation Queue */
+  .bulk-btn {
+    margin-right: 5px;
+    padding: 6px 10px;
+    background: #e74c3c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Flagged table */
+  .flagged-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    margin-top: 10px;
+  }
+  .flagged-table th, .flagged-table td { padding: 10px; border: 1px solid #ddd; }
+  .flagged-table button { margin-right: 5px; padding:4px 8px; cursor: pointer; }
+  
+  /* Notifications */
+  .aps-main input[type="text"] { width: 300px; padding: 6px; margin-left: 10px; }
+  

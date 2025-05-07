@@ -1,0 +1,142 @@
+/* Container styling */
+.dashboard-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header and Navigation */
+  .dashboard-header {
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .dashboard-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  .dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .dashboard-nav ul li a {
+    text-decoration: none;
+    color: #1a73e8;
+    font-weight: bold;
+  }
+  
+  /* Controls: Date Range, Search, Filter */
+  .dashboard-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .control-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .search-filter {
+    flex: 1;
+    justify-content: flex-end;
+  }
+  
+  .search-filter input[type="text"] {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .filter-btn {
+    padding: 5px 10px;
+    border: none;
+    background-color: #1a73e8;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Summary Cards */
+  .summary-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  .summary-cards .card {
+    flex: 1;
+    min-width: 150px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .summary-cards .card h3 {
+    margin: 0 0 10px;
+    font-size: 1rem;
+  }
+  
+  /* Performance Charts */
+  .performance-charts {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .performance-charts .chart {
+    flex: 1;
+    min-width: 300px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .chart-placeholder {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #e9ecef;
+    border-radius: 3px;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* Quick Actions Panel */
+  .quick-actions {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .quick-actions button {
+    padding: 10px 15px;
+    margin: 0 10px;
+    border: none;
+    background-color: #1a73e8;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .quick-actions button:hover {
+    background-color: #1558b0;
+  }
+  

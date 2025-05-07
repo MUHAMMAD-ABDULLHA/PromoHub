@@ -1,0 +1,111 @@
+/* Sidebar container */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #fff; /* Modern white background */
+  color: #333; /* Dark text for contrast */
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 0 8px 8px 0; /* Rounded right corners */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Sidebar hidden when closed */
+.sidebar.closed {
+  transform: translateX(-100%);
+}
+
+/* Sidebar visible when open */
+.sidebar.open {
+  transform: translateX(0);
+}
+
+/* Open button (hamburger) on top left */
+.sidebar-open-button {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background-color: #1a73e8; /* Google Blue */
+  color: #fff;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  z-index: 1100;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Close button inside sidebar, placed at top right */
+.sidebar-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Navigation list styling */
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 3rem; /* Prevent overlap with close button */
+}
+
+.sidebar nav ul li {
+  margin: 1rem 0; /* Increased spacing for a modern feel */
+}
+
+.sidebar nav ul li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover,
+.sidebar nav ul li a.active {
+  color: #1a73e8;
+  font-weight: bold;
+}
+
+/* Logout button styling */
+.logout-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  background-color: #d32f2f;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.logout-button:hover {
+  background-color: #b71c1c;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .sidebar {
+    width: 200px;
+    padding: 0.75rem;
+  }
+  
+  .sidebar nav ul li a {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,211 @@
+:root {
+  --bg-page: #f4f6f8;
+  --bg-card: #ffffff;
+  --text-primary: #2c3e50;
+  --text-secondary: #7f8c8d;
+  --color-info: #3498db;
+  --color-success: #27ae60;
+  --color-warning: #f39c12;
+  --color-danger: #e74c3c;
+  --border-radius: 6px;
+  --transition-fast: 0.2s ease;
+}
+
+/* Reset & base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.um-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.um-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.um-header__title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.um-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.um-search,
+.um-filter,
+.um-bulk-actions select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-size: 0.9rem;
+}
+
+.um-add-btn,
+.um-bulk-actions button {
+  background-color: var(--color-info);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.um-add-btn:hover,
+.um-bulk-actions button:hover {
+  background-color: #2980b9;
+}
+
+/* Bulk actions row */
+.um-bulk-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ========== Pending Registrations ========== */
+.um-pending {
+  margin-bottom: 2rem;
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.um-pending__header {
+  background-color: var(--color-warning);
+  color: #fff;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.um-pending__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.um-pending__table th,
+.um-pending__table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.um-pending__actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+/* ========== Active Users Table ========== */
+.um-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.um-table th,
+.um-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.um-table th {
+  background-color: var(--color-info);
+  color: #fff;
+  font-weight: 500;
+}
+
+.um-table select {
+  padding: 0.3rem 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* ========== Badges & Status Indicators ========== */
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.badge.active { background-color: var(--color-success); }
+.badge.deactivated { background-color: var(--color-danger); }
+.badge.pending { background-color: var(--color-warning); }
+
+/* ========== Action Buttons ========== */
+.um-actions button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  transition: transform var(--transition-fast);
+}
+
+.um-actions button:hover {
+  transform: scale(1.1);
+}
+
+/* ========== Pagination ========== */
+.um-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 1rem;
+}
+
+.um-pagination button {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid var(--color-info);
+  background-color: var(--color-info);
+  color: #fff;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.um-pagination button:hover {
+  background-color: #2980b9;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .um-controls {
+    flex-direction: column;
+  }
+
+  .um-pagination {
+    flex-direction: column;
+  }
+}
