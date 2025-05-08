@@ -7,12 +7,9 @@ import (
 )
 
 func CampaignRoutes(rg *gin.RouterGroup) {
-	campaign := rg.Group("/campaigns")
-	{
-		campaign.POST("/", controllers.CreateCampaign)
-		campaign.GET("/", controllers.GetAllCampaigns)
-		campaign.GET("/:id", controllers.GetCampaign)
-		campaign.PUT("/:id", controllers.UpdateCampaign)
-		campaign.DELETE("/:id", controllers.DeleteCampaign)
-	}
+	rg.POST("/", controllers.CreateCampaign)
+	rg.GET("", controllers.GetAllCampaigns)
+	rg.GET("/:id", controllers.GetCampaign)
+	rg.PUT("/:id", controllers.UpdateCampaign)
+	rg.DELETE("/:id", controllers.DeleteCampaign)
 }

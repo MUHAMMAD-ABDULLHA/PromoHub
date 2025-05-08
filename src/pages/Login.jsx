@@ -37,7 +37,7 @@ function Login() {
       localStorage.setItem('userEmail', data.email);
   
       alert("Login successful!");
-      navigate('/campaign-creation'); // ✅ Now move after successful login
+      navigate('/campaign-creation'); 
   
     } catch (error) {
       console.error("Login error:", error);
@@ -47,9 +47,47 @@ function Login() {
   
 
   const handleGoogleSignIn = () => {
-    alert("Google Sign-In not implemented yet");
+    window.google.accounts.id.initialize({
+      client_id: "268718797943-ka8u44ld2gaa75losn91l7vo81iccd2d.apps.googleusercontent.com",
+      callback: handleCredentialResponse
+      
+    });
+    console.log("Google Sign-In initialized");
+    window.google.accounts.id.prompt();  // shows popup
   };
-
+  
+  const handleCredentialResponse = async (response) => {
+    const idToken = response.credential; // this is the id_token
+  
+    try {
+      console.log("Google ID Token:", idToken);
+      const serverResponse = await fetch('http://localhost:8080/google-login', {
+        method: 'POST',
+        credentials: 'include',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id_token: idToken })
+      });
+  
+      const data = await serverResponse.json();
+  
+      if (!serverResponse.ok) throw new Error(data.message || "Google login failed");
+  
+      console.log("Google login success:", data);
+  
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('userRole', data.role);
+      localStorage.setItem("user_id", data.user_id);
+      localStorage.setItem('userEmail', data.email);
+  
+      alert("Google login successful!");
+      navigate('/campaign-creation');
+  
+    } catch (error) {
+      console.error("Google login error:", error);
+      alert(error.message || "Login failed");
+    }
+  };
+  
   return (
     <div className="login-form">
       <h2>Login</h2>
@@ -75,6 +113,7 @@ function Login() {
           />
         </div>
         <div className="button-group">
+          <p className='forgot-link'><Link to= "/forget-password">Forgot Password</Link></p>
           <button type="submit">Login</button>
           <button 
             type="button" 

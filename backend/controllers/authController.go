@@ -1,6 +1,7 @@
 package controllers
 
 import (
+	"context"
 	"fmt"
 	"net/http"
 	"os"
@@ -15,6 +16,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"github.com/golang-jwt/jwt/v4"
+	"google.golang.org/api/idtoken"
 )
 
 // Register a new user
@@ -310,6 +312,75 @@ func LoginHandler(c *gin.Context) {
 		"user_id": user.ID,
 	})
 	fmt.Println(user.Role)
+}
+func verifyGoogleToken(idToken string) (string, error) {
+	payload, err := idtoken.Validate(context.Background(), idToken, "268718797943-ka8u44ld2gaa75losn91l7vo81iccd2d.apps.googleusercontent.com")
+	if err != nil {
+		return "", err
+	}
+	fmt.Println("Payload:", payload)
+	email := payload.Claims["email"].(string)
+	fmt.Println("Email:", email)
+	return email, nil
+}
+
+func GoogleLoginHandler(c *gin.Context) {
+	var req struct {
+		IDToken string `json:"id_token"`
+	}
+
+	if err := c.ShouldBindJSON(&req); err != nil {
+		c.JSON(http.StatusBadRequest, gin.H{"error": "Invalid request"})
+		return
+	}
+
+	email, err := verifyGoogleToken(req.IDToken)
+	if err != nil {
+		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid Google token: " + err.Error()})
+		return
+	}
+
+	var user models.User
+	query := `SELECT id, role FROM users WHERE email=$1`
+	err = config.DB.QueryRow(query, email).Scan(&user.ID, &user.Role)
+	if err != nil {
+		if err == sql.ErrNoRows {
+			// 👉 Optionally create user if doesn't exist
+			// If you don't want auto-register:
+			c.JSON(http.StatusUnauthorized, gin.H{"error": "❌ Email not found"})
+			return
+
+			// Otherwise, auto-insert user:
+			/*
+				insertQuery := `INSERT INTO users (email, role) VALUES ($1, 'user') RETURNING id, role`
+				err = config.DB.QueryRow(insertQuery, email).Scan(&user.ID, &user.Role)
+				if err != nil {
+					c.JSON(http.StatusInternalServerError, gin.H{"error": "Failed to create user"})
+					return
+				}
+			*/
+		} else {
+			c.JSON(http.StatusInternalServerError, gin.H{"error": "❌ Database error"})
+			return
+		}
+	}
+
+	// ✅ Generate JWT
+	claims := jwt.MapClaims{
+		"user_id": user.ID,
+		"role":    user.Role,
+		"exp":     time.Now().Add(time.Hour * 1).Unix(),
+	}
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	signedToken, _ := token.SignedString([]byte(os.Getenv("JWT_SECRET")))
+
+	c.JSON(http.StatusOK, gin.H{
+		"message": "✅ Google login successful",
+		"token":   signedToken,
+		"role":    user.Role,
+		"user_id": user.ID,
+		"email":   email,
+	})
 }
 
 // Login a user

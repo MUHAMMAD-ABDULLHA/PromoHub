@@ -29,10 +29,13 @@ import AiAdCustomization from "./pages/brandFeatures/AiAdCustomization";
 import AutomaticAdContentAdaptation from "./pages/brandFeatures/AutomaticAdContentAdaptation";
 import LocationBasedAdDelivery from "./pages/brandFeatures/LocationBasedAdDelivery";
 import ConsistentBrandMessaging from "./pages/brandFeatures/ConsistentBrandMessaging";
-import UnifiedAdDashboard from "./pages/brandFeatures/UnifiedAdDashboard";
+import UnifiedAdDashboard from "./pages/dashboard/BrandAdminDashboard";
 import ResourceCampaignSystem from "./pages/brandFeatures/ResourceCampaignSystem";
 import SocialMedia from "./components/SocialMedia";
+import ForgetPassword from "./pages/ForgetPassword";
+import CampaignCard from "./components/CampaignCard";
 import "./App.css";
+import BrandAdminDashboard from "./pages/dashboard/BrandAdminDashboard";
 
 function App() {
   return (
@@ -56,6 +59,10 @@ function App() {
         <Route path="/user-management" element={<UserManagement />} />
         <Route path="/admin-campaign-management" element={<AdminCampaignManagement />} />
         <Route path="/admin-platform-setting" element={<AdminPlatformSetting />} />
+        <Route path = "/Forget-Password" element ={<ForgetPassword/>} />
+        <Route path="/campaigns/:id" element={<CampaignCard />} />
+        <Route path="/campaigns/edit/:id" element={<CampaignCard />} />
+        <Route path="/campaigns" element={<CampaignCard />} />
         {/* Brand-Specific Feature Routes */}
         <Route path="/social-media" element={<SocialMedia/>}/>
         <Route path="/ai-audience-segmentation" element={<AiAudienceSegmentation />} />
@@ -68,7 +75,7 @@ function App() {
         <Route path="/auto-ad-content" element={<AutomaticAdContentAdaptation />} />
         <Route path="/location-based-ad-delivery" element={<LocationBasedAdDelivery />} />
         <Route path="/consistent-brand-messaging" element={<ConsistentBrandMessaging />} />
-        <Route path="/unified-ad-dashboard" element={<UnifiedAdDashboard />} />
+        <Route path="/unified-ad-dashboard" element={<BrandAdminDashboard />} />
         <Route path="/resource-campaign-system" element={<ResourceCampaignSystem />} />
       </Routes>
     </Layout>
