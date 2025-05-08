@@ -26,7 +26,7 @@ const BrandAdminDashboard = () => {
         setLoading(true);
         try {
           const token = localStorage.getItem("token");
-          const res = await fetch("http://localhost:8080/brand/campaigns", {
+          const res = await fetch("http://localhost:8080/brand/campaigns/", {
             credential: "include",
             headers: {
               "Content-Type": "application/json",
