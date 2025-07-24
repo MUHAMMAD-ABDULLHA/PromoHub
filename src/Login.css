@@ -1,0 +1,309 @@
+/* PromoHub Login Styles */
+.phl-login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f9fafb;
+  padding: clamp(12px, 3vw, 20px);
+}
+
+.phl-login-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: clamp(24px, 5vw, 40px);
+  width: 100%;
+  max-width: clamp(320px, 90vw, 420px);
+}
+
+.phl-logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: clamp(16px, 4vw, 24px);
+  color: #4F46E5;
+}
+
+.phl-logo-section h1 {
+  font-size: clamp(20px, 5vw, 24px);
+  font-weight: 700;
+  margin-left: clamp(8px, 2vw, 12px);
+  margin-top: clamp(16px, 4vw, 21px);
+}
+
+.phl-welcome-title {
+  font-size: clamp(20px, 5vw, 24px);
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: clamp(6px, 2vw, 8px);
+  color: #111827;
+}
+
+.phl-subtitle {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: clamp(20px, 5vw, 32px);
+  font-size: clamp(12px, 3vw, 14px);
+}
+
+.phl-error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: clamp(8px, 2vw, 12px);
+  border-radius: 6px;
+  margin-bottom: clamp(12px, 3vw, 20px);
+  font-size: clamp(12px, 2.5vw, 14px);
+  text-align: center;
+}
+
+.phl-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 3vw, 16px);
+}
+
+.phl-input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.phl-input-icon {
+  position: absolute;
+  left: 14px;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+.login-form input {
+    width: 100%;
+    padding: 10px 30px;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+  }
+  
+
+.phl-input-group input {
+  width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.phl-input-group input::placeholder {
+  color: #9ca3af;
+}
+
+.phl-input-group input:focus {
+  outline: none;
+  border-color: #4F46E5;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.phl-password-toggle {
+  position: absolute;
+  right: clamp(10px, 2vw, 14px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #9ca3af;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 1;
+}
+
+.phl-password-toggle svg {
+  width: clamp(18px, 4vw, 20px);
+  height: clamp(18px, 4vw, 20px);
+}
+
+.phl-forgot-password {
+  text-align: right;
+  font-size: clamp(12px, 2.5vw, 14px);
+  margin-top: clamp(8px, 2vw, 12px);
+}
+
+.phl-forgot-password a {
+  color: #4F46E5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.phl-forgot-password a:hover {
+  text-decoration: underline;
+}
+
+.phl-signin-button {
+  background-color: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: clamp(10px, 2.5vw, 12px);
+  font-size: clamp(14px, 3vw, 16px);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: clamp(6px, 2vw, 8px);
+  width: 100%;
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.phl-signin-button:hover {
+  background-color: #4338CA;
+}
+
+.phl-signin-button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+}
+
+.phl-divider {
+  display: flex;
+  align-items: center;
+  color: #9ca3af;
+  font-size: clamp(12px, 2.5vw, 14px);
+  margin: clamp(12px, 3vw, 16px) 0;
+}
+
+.phl-divider::before,
+.phl-divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.phl-divider span {
+  padding: 0 clamp(8px, 2vw, 12px);
+}
+
+.phl-google-signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, 2vw, 8px);
+  width: 100%;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: clamp(10px, 2.5vw, 12px);
+  font-size: clamp(12px, 2.5vw, 14px);
+  font-weight: 500;
+  color: #374151;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-height: 44px;
+  touch-action: manipulation;
+}
+
+.phl-google-signin-button:hover {
+  background-color: #f9fafb;
+}
+
+.phl-google-signin-button img {
+  width: clamp(16px, 4vw, 18px);
+  height: clamp(16px, 4vw, 18px);
+}
+
+.phl-google-signin-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.phl-signup-link {
+  text-align: center;
+  margin-top: clamp(16px, 4vw, 24px);
+  color: #6b7280;
+  font-size: clamp(12px, 2.5vw, 14px);
+}
+
+.phl-signup-link a {
+  color: #4F46E5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.phl-signup-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 479px) {
+  .phl-login-card {
+    padding: clamp(16px, 4vw, 24px);
+    max-width: 100%;
+  }
+
+  .phl-logo-section h1 {
+    font-size: clamp(18px, 4.5vw, 20px);
+  }
+
+  .phl-welcome-title {
+    font-size: clamp(18px, 4.5vw, 20px);
+  }
+
+  .phl-input-group input {
+    padding: clamp(8px, 2vw, 10px) clamp(12px, 2.5vw, 14px) clamp(8px, 2vw, 10px) clamp(32px, 7vw, 40px);
+  }
+
+  .phl-signin-button,
+  .phl-google-signin-button {
+    min-height: 48px;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  .phl-login-card {
+    padding: clamp(20px, 4.5vw, 32px);
+    max-width: clamp(360px, 90vw, 400px);
+  }
+
+  .phl-logo-section h1 {
+    font-size: clamp(20px, 4.5vw, 22px);
+  }
+
+  .phl-welcome-title {
+    font-size: clamp(20px, 4.5vw, 22px);
+  }
+}
+
+@media (min-width: 768px) {
+  .phl-login-card {
+    padding: clamp(32px, 5vw, 40px);
+    max-width: clamp(400px, 90vw, 420px);
+  }
+}
+
+@media (orientation: landscape) and (max-height: 500px) {
+  .phl-login-container {
+    padding: clamp(10px, 2vw, 16px);
+  }
+
+  .phl-login-card {
+    padding: clamp(16px, 4vw, 24px);
+    max-width: clamp(300px, 80vw, 400px);
+  }
+
+  .phl-logo-section h1 {
+    font-size: clamp(18px, 4vw, 20px);
+  }
+
+  .phl-welcome-title {
+    font-size: clamp(18px, 4vw, 20px);
+  }
+}
+
+@media (min-resolution: 2dppx) {
+  .phl-google-signin-button img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}

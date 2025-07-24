@@ -1,0 +1,1578 @@
+/* InfluencerUnique.css */
+.Influencer_CollabContainer {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  background: #101823;
+  color: #FFFFFF;
+  font-family: 'Inter', sans-serif;
+}
+
+.Influencer_Notification {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: #223249;
+  border: 1px solid #223249;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  color: #FFFFFF;
+}
+
+.Influencer_Notification button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #90A9CB;
+  font-size: 16px;
+}
+
+.Influencer_Tabs {
+  display: flex;
+  border-bottom: 1px solid #223249;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  white-space: nowrap;
+  background: #223249;
+  padding: 4px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.Influencer_Tab {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #90A9CB;
+  transition: all 0.3s;
+}
+
+.Influencer_Tab:hover, .Influencer_Tab.Influencer_Active {
+  color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+  font-weight: 500;
+}
+
+.Influencer_TabContent {
+  flex: 1;
+  background: #101823;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.Influencer_CampaignsPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Influencer_CampaignsHeader h2 {
+  color: #FFFFFF;
+  font-size: 20px;
+  margin: 0;
+}
+
+.Influencer_CampaignsTableContainer {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.Influencer_TableControls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-direction: column;
+}
+
+@media (min-width: 640px) {
+  .Influencer_TableControls {
+    flex-direction: row;
+  }
+}
+
+.Influencer_SearchContainer {
+  display: flex;
+  align-items: center;
+  background: #223249;
+  border-radius: 8px;
+  padding: 8px;
+  flex: 1;
+  max-width: 300px;
+}
+
+.Influencer_SearchIcon {
+  color: #90A9CB;
+  margin-right: 8px;
+}
+
+.Influencer_SearchInput {
+  border: none;
+  background: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.Influencer_SearchInput::placeholder {
+  color: #90A9CB;
+}
+
+.Influencer_FilterControls {
+  display: flex;
+  gap: 12px;
+}
+
+.Influencer_FilterSelect {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #223249;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.Influencer_Btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.Influencer_BtnSecondary {
+  background: #223249;
+  color: #90A9CB;
+}
+
+.Influencer_BtnSecondary:hover {
+  background: #2A3A55;
+}
+
+.Influencer_TableWrapper {
+  border: 1px solid #223249;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.Influencer_DataTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Influencer_DataTable thead tr {
+  background: #223249;
+  color: #90A9CB;
+  font-weight: normal;
+}
+
+.Influencer_DataTable th, .Influencer_DataTable td {
+  padding: 12px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.Influencer_TextRight {
+  text-align: right;
+}
+
+.Influencer_DataTable tbody tr {
+  border-top: 1px solid #223249;
+}
+
+.Influencer_CampaignName {
+  color: #FFFFFF;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.Influencer_StatusBadge {
+  padding: 4px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.Influencer_active {
+  background: #2196F3;
+  color: #FFFFFF;
+}
+
+.Influencer_pending {
+  background: #FF5722;
+  color: #FFFFFF;
+}
+
+.Influencer_completed {
+  background: #4CAF50;
+  color: #FFFFFF;
+}
+
+.Influencer_ActionButtons button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #90A9CB;
+}
+
+.Influencer_ActionButtons button:hover {
+  color: #FFFFFF;
+}
+
+.Influencer_CommunicationPanel {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.Influencer_ChatContainer {
+  display: flex;
+  flex: 1;
+  border: 1px solid #223249;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.Influencer_ConversationSidebar {
+  width: 240px;
+  background: #101823;
+  border-right: 1px solid #223249;
+  display: flex;
+  flex-direction: column;
+}
+
+.Influencer_ConversationSidebar.Influencer_Hidden {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .Influencer_ConversationSidebar.Influencer_Hidden {
+    display: flex;
+  }
+}
+
+.Influencer_SidebarHeader {
+  padding: 12px;
+  border-bottom: 2px solid #2196F3;
+}
+
+.Influencer_SidebarHeader h3 {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.Influencer_SearchBar {
+  display: flex;
+  align-items: center;
+  background: #223249;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 8px;
+}
+
+.Influencer_SearchBar input {
+  border: none;
+  outline: none;
+  flex: 1;
+  font-size: 14px;
+  color: #FFFFFF;
+  background: none;
+}
+
+.Influencer_SearchBar input::placeholder {
+  color: #90A9CB;
+}
+
+.Influencer_ConversationList {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.Influencer_ConversationItem {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  cursor: pointer;
+  border-bottom: 1px solid #223249;
+}
+
+.Influencer_ConversationItem:hover, .Influencer_ConversationItem.Influencer_Active {
+  background: #2A3A55;
+}
+
+.Influencer_ConversationAvatar {
+  width: 40px;
+  height: 40px;
+  background: #223249;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.Influencer_ConversationDetails {
+  flex: 1;
+}
+
+.Influencer_ConversationName {
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.Influencer_ConversationPreview {
+  color: #90A9CB;
+  font-size: 12px;
+}
+
+.Influencer_UnreadCount {
+  background: #2196F3;
+  color: #FFFFFF;
+  border-radius: 12px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.Influencer_ChatArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.Influencer_ChatHeader {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-bottom: 1px solid #223249;
+  background: #223249;
+}
+
+.Influencer_BackButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #90A9CB;
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .Influencer_BackButton {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.Influencer_ChatInfo {
+  flex: 1;
+}
+
+.Influencer_ChatTitle {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.Influencer_ChatActions {
+  display: flex;
+  gap: 8px;
+}
+
+.Influencer_BtnIcon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #90A9CB;
+}
+
+.Influencer_BtnIcon:hover {
+  color: #FFFFFF;
+}
+
+.Influencer_MessageList {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  background: #101823;
+}
+
+.Influencer_Message {
+  margin-bottom: 16px;
+  max-width: 70%;
+}
+
+.Influencer_Message p {
+  background: #223249;
+  color: #FFFFFF;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin: 0;
+}
+
+.Influencer_Sent {
+  margin-left: auto;
+}
+
+.Influencer_Sent p {
+  background: #2196F3;
+  border-radius: 12px 8px 0 12px;
+}
+
+.Influencer_Received p {
+  background: #223249;
+  border-radius: 0 12px 12px 8px;
+}
+
+.Influencer_Time {
+  color: #90A9CB;
+  font-size: 12px;
+  margin-top: 4px;
+  display: block;
+}
+
+.Influencer_MessageInputArea {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-top: 1px solid #223249;
+  background: #223249;
+}
+
+.Influencer_MessageInputArea input {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 8px;
+  background: #2A3A55;
+  color: #FFFFFF;
+}
+
+.Influencer_MessageInputArea input::placeholder {
+  color: #90A9CB;
+}
+
+.Influencer_CollaborationPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Influencer_ProjectList {
+  padding: 12px;
+}
+
+.Influencer_ProjectList h2 {
+  color: #FFFFFF;
+  font-size: 22px;
+  margin: 0;
+}
+
+.Influencer_ProjectCard {
+  background: #223249;
+  border: 1px solid #2A3A55;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.Influencer_pending {
+  border-left: 4px solid #FF5722;
+}
+
+.Influencer_accepted {
+  border-left: 4px solid #4CAF50;
+}
+
+.Influencer_rejected {
+  border-left: 4px solid #F44336;
+}
+
+.Influencer_ProjectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.Influencer_ProjectHeader h3 {
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 18px;
+}
+
+.Influencer_Status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.Influencer_pending .Influencer_Status {
+  background: #FF5722;
+}
+
+.Influencer_accepted .Influencer_Status {
+  background: #4CAF50;
+}
+
+.Influencer_rejected .Influencer_Status {
+  background: #F44336;
+}
+
+.Influencer_ProjectDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Influencer_Detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.Influencer_Detail label {
+  font-weight: normal;
+  color: #90A9CB;
+}
+
+.Influencer_Detail span {
+  color: #FFFFFF;
+}
+
+.Influencer_InviteActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.Influencer_BtnSuccess {
+  background: #4CAF50;
+  color: #FFFFFF;
+}
+
+.Influencer_BtnSuccess:hover {
+  background: #388E3C;
+}
+
+.Influencer_BtnDanger {
+  background: #F44336;
+  color: #FFFFFF;
+}
+
+.Influencer_BtnDanger:hover {
+  background: #D32F2F;
+}
+
+.Influencer_Conflicts {
+  margin-top: 12px;
+}
+
+.Influencer_Conflicts label {
+  color: #90A9CB;
+}
+
+.Influencer_Conflicts ul {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+
+.Influencer_Conflicts li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+}
+
+.Influencer_Conflicts button {
+  background: none;
+  border: 1px solid #90A9CB;
+  color: #90A9CB;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.Influencer_Conflicts button:hover {
+  background: #2A3A55;
+  color: #FFFFFF;
+}
+
+.Influencer_ProjectActions {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.Influencer_BtnPrimary {
+  background: #2196F3;
+  color: #FFFFFF;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Influencer_BtnPrimary:hover {
+  background: #1976D2;
+}
+
+.Influencer_BtnOutline {
+  background: none;
+  border: 1px solid #90A9CB;
+  color: #90A9CB;
+}
+
+.Influencer_BtnOutline:hover {
+  background: #2A3A55;
+  color: #FFFFFF;
+}
+
+.Influencer_DashboardContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Influencer_DashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .Influencer_DashboardHeader {
+    flex-direction: row;
+  }
+}
+
+.Influencer_DashboardHeader h2 {
+  color: #FFFFFF;
+  font-size: 22px;
+  margin: 0;
+}
+
+.Influencer_TimeRange {
+  display: flex;
+  gap: 8px;
+}
+
+.Influencer_TimeRange button {
+  padding: 8px 16px;
+  background: #223249;
+  border: none;
+  border-radius: 8px;
+  color: #90A9CB;
+  cursor: pointer;
+}
+
+.Influencer_TimeRange button.Influencer_Active {
+  background: #2196F3;
+  color: #FFFFFF;
+}
+
+.Influencer_LoadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+.Influencer_LoadingSpinner {
+  border: 4px solid #223249;
+  border-top: 4px solid #2196F3;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.Influencer_MetricsOverview {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .Influencer_MetricsOverview {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.Influencer_MetricCard {
+  background: #223249;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.Influencer_MetricHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Influencer_MetricHeader h4 {
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 16px;
+}
+
+.Influencer_MetricValue {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.Influencer_MetricChange {
+  font-size: 14px;
+}
+
+.Influencer_Positive {
+  color: #4CAF50;
+}
+
+.Influencer_Negative {
+  color: #F44336;
+}
+
+.Influencer_ChartsContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 1024px) {
+  .Influencer_ChartsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.Influencer_ChartContainer {
+  background: #223249;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.Influencer_ChartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.Influencer_ChartHeader h4 {
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 16px;
+}
+
+.Influencer_ChartFilter {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #2A3A55;
+  color: #FFFFFF;
+}
+
+.Influencer_DemoChart {
+  background: #223249;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.Influencer_DemoChart h5 {
+  color: #FFFFFF;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.Influencer_DemographicsGrid {
+  display: flex;
+  justify-content: center;
+}
+
+.Influencer_HeatmapContainer {
+  background: #223249;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.Influencer_HeatmapContainer h5 {
+  color: #FFFFFF;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.Influencer_HeatmapGrid {
+  display: grid;
+  grid-template-columns: 80px repeat(5, 1fr);
+  gap: 4px;
+}
+
+.Influencer_HeatmapRowLabel {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+.Influencer_HeatmapCell {
+  padding: 8px;
+  text-align: center;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+.Influencer_HeatmapCorner {
+  background: none;
+}
+
+.Influencer_HeatmapColLabel {
+  text-align: center;
+  padding: 8px;
+  color: #FFFFFF;
+  font-size: 12px;
+}
+
+.Influencer_TopPerforming h3 {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.Influencer_PostsList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .Influencer_PostsList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Influencer_PerformancePost {
+  background: #223249;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Influencer_PerformancePost img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.Influencer_PostMetrics {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.Influencer_GamificationContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Influencer_ScoreCard {
+  background: #223249;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.Influencer_ScoreCard h3 {
+  color: #FFFFFF;
+  margin: 0 0 12px;
+}
+
+.Influencer_ScoreValue {
+  color: #2196F3;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.Influencer_ScoreLevel {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin: 8px 0;
+}
+
+.Influencer_ProgressBar {
+  background: #2A3A55;
+  border-radius: 4px;
+  height: 8px;
+  margin: 12px 0;
+}
+
+.Influencer_Progress {
+  background: #2196F3;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.Influencer_ProgressText {
+  color: #90A9CB;
+  font-size: 14px;
+}
+
+.Influencer_BadgesContainer h3 {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.Influencer_BadgesList {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .Influencer_BadgesList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.Influencer_BadgeCard {
+  background: #223249;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.Influencer_BadgeCard img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.Influencer_BadgeCard h4 {
+  color: #FFFFFF;
+  margin: 0 0 8px;
+}
+
+.Influencer_BadgeProgress {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 0;
+}
+
+.Influencer_BadgeProgress span {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.Influencer_BadgeReward {
+  color: #90A9CB;
+  font-size: 14px;
+}
+
+.Influencer_Leaderboard h3 {
+  color: #FFFFFF;
+  font-size: 18px;
+  margin: 0 0 12px;
+}
+
+.Influencer_LeaderboardList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Influencer_LeaderboardItem {
+  background: #223249;
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Influencer_Rank {
+  color: #2196F3;
+  font-weight: bold;
+}
+
+.Influencer_LeaderboardItem img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.Influencer_Username {
+  flex: 1;
+  color: #FFFFFF;
+}
+
+.Influencer_Score {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.Influencer_AdsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.Influencer_AdsHeader h2 {
+  color: #FFFFFF;
+  font-size: 22px;
+  margin: 0;
+}
+
+.Influencer_AdsHeader p {
+  color: #90A9CB;
+  margin: 8px 0 0;
+}
+
+.Influencer_FilterControlsEnhanced {
+  background: #223249;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.Influencer_FilterPanel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+@media (min-width: 640px) {
+  .Influencer_FilterPanel {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+.Influencer_FilterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Influencer_FilterGroup label {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.Influencer_CheckboxGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.Influencer_CheckboxGroup label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #FFFFFF;
+}
+
+.Influencer_FilterGroup select, .Influencer_FilterGroup input {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #2A3A55;
+  color: flex;
+  gap: #FFFFFF;
+  font-size: 14px;
+}
+
+.Influencer_AdsGrid {
+  display: grid;
+  grid-template-columns: 1, 1fr;
+  gap: auto;
+}
+
+@media (min-width: 640px) {
+  .Influencer_adsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+    .Influencer_AdsGrid {
+      grid-template-columns: repeat(3, 3fr);
+    }
+}
+
+.Influencer_AdCard {
+  background: #223249;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.Influencer_AdImageContainer {
+  position: relative;
+}
+
+.Influencer_AdImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+.Influencer_GamificationBadge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #FFFFFF;
+  border-radius: 50%;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.Influencer_GamificationTooltip {
+  display: none;
+  position: absolute;
+  background: #223249;
+  color: #FFFFFF;
+  padding: 8px;
+  border-radius: 4px;
+  top: 100%;
+  right: 0;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0.2);
+  z-index: 1;
+}
+
+.Influencer_GamificationBadge:hover .Influencer_TabificationTooltip {
+  display: block;
+}
+
+.Influencer_GamificationTooltip h4 {
+  margin: 0;
+  font-size: 14px;
+}
+
+.Influencer_GamificationTask {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.Influencer_GamificationTask.completed {
+  color: #4CAF50;
+}
+
+.Influencer_AdInfo {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Influencer_AdHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Influencer_BrandLogo {
+  width: block;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.Influencer_BrandName {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.Influencer_AdCaption {
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.Influencer_AdStats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2;
+  
+}
+
+.Influencer_StatItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.Influencer_StatLabel {
+  font-size: 12px;
+  color: #90A9CB;
+}
+
+.Influencer_StatValue {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.Influencer_AdActions {
+  display: flex;
+  gap: none;
+
+}
+
+.InfluencerActionButton {
+  background: none;
+  border: none;
+  color: #90A9CB;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.InfluencerActionButton:hover {
+  color: #FFFFFF;
+}
+
+.Influencer_LikeButton:hover {
+  color: #F44336;
+}
+
+.Influencer_CommentButton:hover {
+  color: #2196F3;
+}
+
+.Influencer_ShareButton:hover {
+  color: #4CAF50;
+}
+
+.Influencer_CommentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Influencer_Comment {
+  display: flex;
+  gap: 8px;
+}
+
+.Influencer_CommentAvatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.Influencer_CommentContent {
+  background: #2A3A55;
+  padding: 8px;
+  border-radius: 8px;
+  color: #FFFFFF;
+}
+
+.Influencer_CommentUsername {
+  font-weight: bold;
+  margin-right: 8px;
+  color: #FFFFFF;
+}
+
+.Influencer_MoreComments {
+  color: #90A9CB;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.Influencer_AddComment {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.Influencer_CommentInput {
+  flex: 1;
+  background: #222222;
+  border: none;
+  padding: 8px;
+  border-radius: 12px;
+  color: #666;
+}
+
+.Influencer_CommentInput::placeholder {
+  color: #90A9CB;
+}
+
+.Influencer_PostCommentButton {
+  background: #2196F3;
+  color: #FFFFFF;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.Influencer_PostCommentButton:disabled {
+  background: #2A3A55;
+  cursor: not-allowed;
+}
+
+.Influencer_CampaignDetail {
+  background: #223249;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+.Influencer_DetailHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.Influencer_DetailHeader h2 {
+  color: #FFFFFF;
+  margin: 0;
+}
+
+.influencer_DetailGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1fr;
+
+}
+
+@media (min-width: 640px) {
+  .Influencer_detailGrid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.Influencer_DetailSection h3 {
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 18px;
+}
+
+.Influencer_DetailProperties {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.Influencer_DetailProperty {
+  display: flex;
+  flex-direction: column;
+}
+
+.Influencer_PropertyLabel {
+  color: #90A9CB;
+  font-size: 14px;
+}
+
+.Influencer_PropertyValue {
+  color: #FFFFFF;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.Influencer_PerformanceMetrics h4 {
+  color: #FFFFFF;
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.Influencer_MetricsGridSmall {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (min-width: 640px) {
+  .Influencer_metricsGridSmall {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.Influencer_Metric {
+  background: #2A3A55;
+  padding: 12px;
+  border-radius: 8px;
+}
+
+.Influencer_MetricLabel {
+  color: #90A9CB;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.Influencer_MetricValue {
+  color: #FFFFFF;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.Influencer_Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.Influencer_ModalContent {
+  background: #223249;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  padding: 16px;
+}
+
+.Influencer_ModalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.Influencer_ModalHeader h3 {
+  color: #FFFFFF;
+  margin: 0;
+  font-size: 18px;
+}
+
+.Influencer_ModalHeader button {
+  background: none;
+  border: none;
+  color: #90A9CB;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.Influencer_ModalBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.Influencer_FormGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.Influencer_FormGroup label {
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.Influencer_FormGroup input {
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #2A3A55;
+  color: #FFFFFF;
+}
+
+.Influencer_FormRow {
+  display: flex;
+  gap: 12px;
+}
+
+.Influencer_FormRow .form-group {
+  flex: 1;
+}
+
+.Influencer_ModalActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.Influencer_ParticipantsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.Influencer_ParticipantItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  background: #2A3A55;
+  border-radius: 8px;
+}
+
+.Influencer_ParticipantInfo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Influencer_ParticipantAvatar {
+  width: 32px;
+  height: 32px;
+  background: #223249;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.Influencer_ParticipantName {
+  color: #FFFFFF;
+}
+
+.Influencer_BtnText {
+  background: none;
+  color: #90A9CB;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Influencer_BtnText:hover {
+  color: #FFFFFF;
+}
+}
+}

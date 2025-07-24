@@ -1,0 +1,25 @@
+.campaign-detail {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  color:black;
+}
+
+.campaign-detail h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.campaign-detail .meta {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.campaign-detail .actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}

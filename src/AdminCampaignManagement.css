@@ -1,0 +1,34 @@
+/* AdminCampaignManagementUI.css */
+.acm-container {
+    padding: 20px;
+    background: #f7f9fc;
+    font-family: Arial, sans-serif;
+  }
+  .acm-controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  .acm-controls input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+  }
+  .acm-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+  }
+  .acm-table th, .acm-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+  }
+  .badge.active { background: #27ae60; color: #fff; padding: 4px 8px; border-radius: 4px; }
+  .badge.flagged { background: #f39c12; color: #fff; padding: 4px 8px; border-radius: 4px; }
+  .actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  

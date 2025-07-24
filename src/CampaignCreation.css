@@ -1,0 +1,395 @@
+
+/* PromoHub Campaign Creation Styles */
+.promohub-campaign-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+.promohub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure button and title are spaced */
+  margin-bottom: 30px;
+  position: relative; /* Prevent overlap issues */
+}
+
+.promohub-back-button {
+  background: none;
+  border: 1px solid #e5e7eb;
+  color: #4F46E5;
+  cursor: pointer;
+  display: inline-flex; /* Ensure button is visible */
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  visibility: visible; /* Explicitly visible */
+  opacity: 1; /* Ensure no transparency */
+  z-index: 10; /* Prevent overlap */
+}
+
+.promohub-back-button:hover:not(:disabled) {
+  background-color: #f3f4f6;
+  border-color: #4F46E5;
+}
+
+.promohub-back-button:disabled {
+  color: #a5b4fc;
+  border-color: #e5e7eb;
+  cursor: not-allowed;
+}
+
+.promohub-back-icon {
+  font-size: 20px;
+}
+
+.promohub-campaign-title {
+  font-size: 1.8rem;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.promohub-title-icon {
+  font-size: 1.8rem;
+}
+
+.promohub-error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.promohub-campaign-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.promohub-form-section {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 1.5rem;
+}
+
+.promohub-section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.promohub-section-icon {
+  font-size: 1.4rem;
+}
+
+.promohub-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.promohub-input-group label {
+  font-weight: 500;
+}
+
+.promohub-input-group input,
+.promohub-input-group select,
+.promohub-input-group textarea {
+  padding: 0.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.promohub-input-group input:disabled,
+.promohub-input-group select:disabled,
+.promohub-input-group textarea:disabled {
+  background: #e9ecef;
+  cursor: not-allowed;
+}
+
+.promohub-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.promohub-checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.promohub-checkbox-group input {
+  margin: 0;
+}
+
+.promohub-features-grid,
+.promohub-kpis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.promohub-feature-icon {
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+.promohub-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.promohub-submit-button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.promohub-submit-button:hover:not(:disabled) {
+  background: #0056b3;
+}
+
+.promohub-submit-button:disabled {
+  background: #6c757d;
+  cursor: not-allowed;
+}
+
+@media (max-width: 600px) {
+  .promohub-two-column {
+    grid-template-columns: 1fr;
+  }
+
+  .promohub-form-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+.promohub-campaign-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+}
+
+.promohub-campaign-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.promohub-title-icon {
+  margin-right: 12px;
+  color: #4F46E5;
+}
+
+.promohub-error-message {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Form Sections */
+.promohub-form-section {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.promohub-form-section:last-child {
+  border-bottom: none;
+}
+
+.promohub-section-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: #111827;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.promohub-section-icon {
+  margin-right: 10px;
+  color: #4F46E5;
+  font-size: 24px;
+}
+
+/* Input Groups */
+.promohub-input-group {
+  margin-bottom: 20px;
+}
+
+.promohub-input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.promohub-input-group input,
+.promohub-input-group select,
+.promohub-input-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  transition: all 0.2s;
+}
+
+.promohub-input-group input:focus,
+.promohub-input-group select:focus,
+.promohub-input-group textarea:focus {
+  outline: none;
+  border-color: #4F46E5;
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.promohub-input-group textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Layout Helpers */
+.promohub-two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* Checkbox Groups */
+.promohub-checkbox-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.promohub-checkbox-group input {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.promohub-checkbox-group label {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  color: #374151;
+  cursor: pointer;
+}
+
+.promohub-feature-icon {
+  margin-right: 8px;
+  color: #4F46E5;
+  font-size: 20px;
+}
+
+/* Features Grid */
+.promohub-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* KPIs Grid */
+.promohub-kpis-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+}
+
+/* Form Actions */
+.promohub-form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.promohub-submit-button {
+  background-color: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.promohub-submit-button:hover {
+  background-color: #4338CA;
+}
+
+.promohub-submit-button:disabled {
+  background-color: #a5b4fc;
+  cursor: not-allowed;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .promohub-two-column {
+    grid-template-columns: 1fr;
+  }
+  
+  .promohub-campaign-card {
+    padding: 24px;
+  }
+  
+  .promohub-campaign-title {
+    font-size: 24px;
+  }
+  
+  .promohub-form-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .promohub-input-group {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .promohub-features-grid,
+  .promohub-kpis-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .promohub-campaign-card {
+    padding: 16px;
+  }
+}
